@@ -46,8 +46,8 @@ export class App extends Component {
 
   render() {
     const { filter } = this.state;
-
     const visibleContacts = this.getFilteredContacts();
+
     return (
       <>
         <Section title={'Phonebook'}>
