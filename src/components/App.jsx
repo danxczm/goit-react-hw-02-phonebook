@@ -53,7 +53,7 @@ export class App extends Component {
         <Section title={'Phonebook'}>
           <ContactForm onSubmit={this.addNewContact} />
         </Section>
-        {visibleContacts.length > 0 && (
+        {visibleContacts.length > 0 ? (
           <Section title={'Contacts'}>
             <Filter value={filter} onChange={this.changeFilter} />
             <ContactsList
@@ -61,6 +61,8 @@ export class App extends Component {
               onDeleteContact={this.deleteContact}
             />
           </Section>
+        ) : (
+          <h2>You have no contacts yet</h2>
         )}
       </>
     );
